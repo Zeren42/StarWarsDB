@@ -145,8 +145,13 @@ section button:hover {
 a.saiba-mais{
     color:rgb(27, 27, 27) !important;
     padding:1rem !important;
-    
     background-color: white;
+    transition: .5s;
+}
+a.saiba-mais:hover{
+    color:white !important;
+    padding:1rem !important;
+    background-color: rgb(12, 62, 82) !important;
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */

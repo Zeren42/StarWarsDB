@@ -50,6 +50,14 @@ let dados = [
         tags: ""
     },
     {
+        nome: "Cristal Kyber",
+        descricao: "Gemas raras e poderosas, os cristais Kyber são o coração dos sabres de luz. Eles canalizam a Força e determinam a cor e o alinhamento do sabre.",
+        tipo: "item",
+        link: "https://pt.wikipedia.org/wiki/Cristal_kyber",
+        foto: "imgs/Kyber.webp",
+        tags: ""
+    },
+    {
         nome: "Tatooine",
         descricao: "Planeta desértico com dois sóis, Tatooine é o lar de muitos escravos e contrabandistas, incluindo Luke Skywalker.",
         tipo: "planeta",
