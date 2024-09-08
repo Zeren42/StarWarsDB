@@ -31,19 +31,22 @@ section {
     /* flex-direction: column; Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
-    max-width: 50vw;
-    text-align: center;
-    border: 2px solid red;
+    max-width: 60vw;
+    /* text-align: center; */
+    
 }
-section p {
+section a{
+    margin-top: 50px !important;
+}
+section p{
     color:rgb(19, 19, 19);
     font-weight: 600;
-    text-align: center;
+    /* text-align: center; */
 }
 .input-section{
     display: flex; /* Usa Flexbox para layout */
     align-items: center; /* Centraliza os itens horizontalmente */
-    max-height: 10px !important;
+    
     display: flex; /* Usa Flexbox para layout */
     flex-direction: row; /* Alinha os itens na vertical */
 }
@@ -92,27 +95,34 @@ section button:hover {
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
 }
+
+.resultados-pesquisa img{
+    max-width: 100%;;
+
+}
 .resultados-pesquisa p{
-    margin: 0 auto;
-    margin-top: -350px;
+    margin: 0px auto;
+    
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
+    overflow-x: hidden;
     flex: 1; /* Faz com que cada item ocupe o espaço disponível */
-    min-height: 200px; /* Define uma altura mínima para garantir que todas as caixas tenham pelo menos esse tamanho */
-    flex-direction: column;
-    flex-basis: 40%; /* Define a largura inicial dos itens */
-    max-width: 40%; /* Limita a largura máxima */
-    width: 40%; /* Define a largura de cada item, ajustando para o número de colunas desejado */
+    min-height: 200px; 
+    flex-basis: 40%; 
+    max-width: 40%; 
+    width: 40%; 
     background:rgba(0,0,0,0.5); /* Cor de fundo dos itens */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
+
+
 
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
@@ -127,8 +137,16 @@ section button:hover {
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+
+
+.item-resultado p{
+    margin-bottom: 20px;
+}
+a.saiba-mais{
+    color:rgb(27, 27, 27) !important;
+    padding:1rem !important;
+    
+    background-color: white;
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
@@ -150,6 +168,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .botoes-section{
+        flex-direction: column;
+    }
+    .botoes-section button{
+        width:100%;
+    }
+    section{
+        max-width: 85vw;
+    }
     h1 {
         font-size: 2rem; /* Tamanho da fonte em telas menores */
         letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
@@ -164,7 +191,9 @@ footer {
         width: 40rem; /* Largura da caixa de resultados em telas menores */
         height: 40vh; /* Altura da caixa de resultados em telas menores */
     }
-
+    .item-resultado{
+        min-width: 100%;
+    }
     .item-resultado h2 {
         font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
     }
@@ -183,7 +212,7 @@ footer {
     }
 
     section button {
-        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        padding:  1rem; /* Espaçamento interno do botão em telas pequenas */
         font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
     }
 
@@ -205,4 +234,10 @@ footer {
     width: 350px;
 }
 
+.botoes-section{
+    gap:20px
+}
+.botoes-section{
+    gap:20px
+}
 
