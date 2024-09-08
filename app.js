@@ -27,6 +27,8 @@ function pesquisar() {
       nome = dado.nome.toLowerCase();
       descricao = dado.descricao.toLowerCase();
       tags = dado.tags.toLowerCase();
+
+      
         if(nome.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)){
       // Constrói o HTML para cada item, incluindo imagem, título, descrição e link
       resultados += `
@@ -38,7 +40,7 @@ function pesquisar() {
           <p class='descricao-meta'>
             ${dado.descricao}
           </p>
-          <a href=${dado.link} target='_blank'>Saiba Mais</a>
+          <a class="saiba-mais" href=${dado.link} target='_blank' >Saiba Mais</a>
         </div>
       `;
         }
@@ -54,3 +56,98 @@ function pesquisar() {
     // Substitui todo o conteúdo da seção pelo HTML gerado.
     section.innerHTML = resultados;
   }
+
+function personagens(){
+  const section = document.getElementById("resultados-pesquisa");
+  let resultados = "";
+
+  for (let dado of dados) {
+    tipo = dado.tipo.toLowerCase();
+      if(tipo == "personagem"){
+        console.log("funcionou")
+    // Constrói o HTML para cada item, incluindo imagem, título, descrição e link
+    resultados += `
+      <div class='item-resultado'>
+        <img class="foto" src=${dado.foto}>
+        <h2>
+          <a href="#" target="_blank" rel="noopener noreferrer">${dado.nome}</a>
+        </h2>
+        <p class='descricao-meta'>
+          ${dado.descricao}
+        </p>
+        <a class="saiba-mais" href=${dado.link} target='_blank' >Saiba Mais</a>
+      </div>
+    `;
+      }
+      else{
+        console.log("não");
+        return
+      }
+      section.innerHTML = resultados;
+
+  }
+
+}
+function itens(){
+  const section = document.getElementById("resultados-pesquisa");
+  let resultados = "";
+
+  for (let dado of dados) {
+    tipo = dado.tipo.toLowerCase();
+      if(tipo == "item"){
+        console.log("funcionou")
+    // Constrói o HTML para cada item, incluindo imagem, título, descrição e link
+    resultados += `
+      <div class='item-resultado'>
+        <img class="foto" src=${dado.foto}>
+        <h2>
+          <a href="#" target="_blank" rel="noopener noreferrer">${dado.nome}</a>
+        </h2>
+        <p class='descricao-meta'>
+          ${dado.descricao}
+        </p>
+        <a class="saiba-mais" href=${dado.link} target='_blank' >Saiba Mais</a>
+      </div>
+    `;
+      }
+      else{
+        console.log("não");
+        
+      }
+      section.innerHTML = resultados;
+
+  }
+
+}
+
+function planetas(){
+  const section = document.getElementById("resultados-pesquisa");
+  let resultados = "";
+
+  for (let dado of dados) {
+    tipo = dado.tipo.toLowerCase();
+      if(tipo == "planeta"){
+        console.log("funcionou")
+    // Constrói o HTML para cada item, incluindo imagem, título, descrição e link
+    resultados += `
+      <div class='item-resultado'>
+        <img class="foto" src=${dado.foto}>
+        <h2>
+          <a href="#" target="_blank" rel="noopener noreferrer">${dado.nome}</a>
+        </h2>
+        <p class='descricao-meta'>
+          ${dado.descricao}
+        </p>
+        <a class="saiba-mais" href=${dado.link} target='_blank' >Saiba Mais</a>
+      </div>
+    `;
+      }
+      else{
+        console.log("não");
+        
+      }
+      section.innerHTML = resultados;
+
+  }
+
+}
