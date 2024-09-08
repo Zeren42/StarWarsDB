@@ -1,4 +1,4 @@
-## Star Wars Database: Uma Galáxia de Informações em Seus Dedos!
+## Star Wars Database: Uma Galáxia de Informações!
 
 **O que é isso?**
 
